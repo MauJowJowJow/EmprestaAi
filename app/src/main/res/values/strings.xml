@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">EmprestaAi</string>
+    <string name="person_name">Nome</string>
+    <string name="city">Cidade</string>
+    <string name="email">E-mail</string>
+    <string name="residencial_phone">Telefone Residencial</string>
+    <string name="cellphone">Telefone Celular</string>
+    <string name="item">Item</string>
+
+    <string name="button_save">Salvar Cadastro</string>
+    <string name="button_insert_amigo">Cadastrar Amigo</string>
+    <string name="button_list_amigo">Consultas Amigo</string>
+
+    <string name="activity_cadastroAmigo">Cadastro de Amigos</string>
+    <string name="activity_consultaAmigo">Consulta de Amigos</string>
+    <string name="activity_detalheAmigo">Detalhe do Amigo</string>
+    <string name="activity_emprestimo">Realizar um Empréstimo</string>
+    <string name="delete">Excluir</string>
+    <string name="creator">Desenvolvedor - Mauricio Rodolfo</string>
+    <string name="creator_email">Email - maumau.g.o@unifebe.edu.br</string>
+    <string name="teacher">Professor - Edney Imme</string>
+</resources>
