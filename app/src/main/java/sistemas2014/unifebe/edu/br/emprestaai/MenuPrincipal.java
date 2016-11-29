@@ -16,7 +16,7 @@ public class MenuPrincipal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
 
-        ImageButton btnCadastraAmigo = (ImageButton) findViewById(R.id.btnCadastraAmigo);
+        ImageButton btnCadastraAmigo = (ImageButton) findViewById(R.id.btnCadastroPessoa);
         btnCadastraAmigo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

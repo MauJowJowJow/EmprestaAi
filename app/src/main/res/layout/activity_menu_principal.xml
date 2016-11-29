@@ -21,7 +21,7 @@
             <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/btnCadastraAmigo"
+                android:id="@+id/btnCadastroPessoa"
                 android:layout_gravity="center"
                 android:src="@drawable/cadastro_amigo" />
         </LinearLayout>

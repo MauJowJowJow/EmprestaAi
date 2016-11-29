@@ -21,6 +21,16 @@ public class CadastroPesssoa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_pessoa);
 
+        Button bntSalvar = (Button) findViewById(R.id.btnSalvar);
+        bntSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                EditText nome = (EditText) findViewById(R.id.txtNome);
+
+            }
+        });
+
 
     }
 }
