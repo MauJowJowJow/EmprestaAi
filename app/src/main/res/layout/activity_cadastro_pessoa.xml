@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Cadastros.CadastroAmigo"
+    tools:context="sistemas2014.unifebe.edu.br.emprestaai.Controller.CadastroPesssoa"
     android:orientation="vertical"
     android:weightSum="1">
 
@@ -33,6 +33,16 @@
             android:id="@+id/txtEmail"
             android:hint="@string/email" />
 
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/txtTelefone"
+            android:hint="@string/cellphone" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,18 +52,21 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:ems="10"
-            android:id="@+id/txtTelefoneResidencial"
-            android:hint="@string/residencial_phone" />
+            android:hint="@string/city"
+            android:id="@+id/txtCidade" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:ems="10"
-            android:id="@+id/txtTelefoneCelular"
-            android:hint="@string/cellphone" />
+            android:hint="@string/city"
+            android:id="@+id/txtCidade" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/city"
+            android:id="@+id/txtCidade" />
+
 
     </LinearLayout>
 

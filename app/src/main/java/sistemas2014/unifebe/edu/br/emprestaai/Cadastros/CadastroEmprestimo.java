@@ -14,9 +14,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.Amigo;
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.DAO.AmigoDAO;
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.DAO.BancoDados;
+import sistemas2014.unifebe.edu.br.emprestaai.Model.DAO.AmigoDAO;
+import sistemas2014.unifebe.edu.br.emprestaai.Model.DAO.BancoDados;
 import sistemas2014.unifebe.edu.br.emprestaai.R;
 
 public class CadastroEmprestimo extends AppCompatActivity {

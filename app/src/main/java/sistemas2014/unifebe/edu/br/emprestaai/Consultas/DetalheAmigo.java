@@ -4,10 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.Amigo;
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.DAO.AmigoDAO;
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.DAO.EmprestimoDAO;
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.Emprestimo;
+import sistemas2014.unifebe.edu.br.emprestaai.Model.DAO.AmigoDAO;
 import sistemas2014.unifebe.edu.br.emprestaai.R;
 
 public class DetalheAmigo extends AppCompatActivity {

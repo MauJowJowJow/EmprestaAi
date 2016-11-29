@@ -5,7 +5,7 @@ import android.content.res.Configuration;
 
 import com.facebook.stetho.Stetho;
 
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.DAO.BancoDados;
+import sistemas2014.unifebe.edu.br.emprestaai.Model.DAO.BancoDados;
 
 /**
  * Created by mauma on 19/07/2016.

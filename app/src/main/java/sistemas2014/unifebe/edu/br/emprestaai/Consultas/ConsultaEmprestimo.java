@@ -3,7 +3,6 @@ package sistemas2014.unifebe.edu.br.emprestaai.Consultas;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,10 +11,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.Amigo;
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.DAO.AmigoDAO;
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.DAO.EmprestimoDAO;
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.Emprestimo;
+import sistemas2014.unifebe.edu.br.emprestaai.Model.DAO.EmprestimoDAO;
 import sistemas2014.unifebe.edu.br.emprestaai.R;
 
 public class ConsultaEmprestimo extends ListActivity {

@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.DAO.BancoDados;
+import sistemas2014.unifebe.edu.br.emprestaai.Model.DAO.BancoDados;
 import sistemas2014.unifebe.edu.br.emprestaai.R;
 
 public class CadastroAmigo extends AppCompatActivity {
@@ -16,7 +16,7 @@ public class CadastroAmigo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro_amigo);
+        setContentView(R.layout.activity_cadastro_pessoa);
 
         Button btnSalvar = (Button) findViewById(R.id.btnSalvar);
         btnSalvar.setOnClickListener(new View.OnClickListener() {

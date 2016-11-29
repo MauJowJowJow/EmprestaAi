@@ -1,19 +1,15 @@
 package sistemas2014.unifebe.edu.br.emprestaai.Consultas;
 
 import android.content.Intent;
-import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.ButtonBarLayout;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import sistemas2014.unifebe.edu.br.emprestaai.MenuPrincipal;
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.DAO.EmprestimoDAO;
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.Emprestimo;
+import sistemas2014.unifebe.edu.br.emprestaai.Model.DAO.EmprestimoDAO;
 import sistemas2014.unifebe.edu.br.emprestaai.R;
 
 public class DetalheEmprestimo extends AppCompatActivity {

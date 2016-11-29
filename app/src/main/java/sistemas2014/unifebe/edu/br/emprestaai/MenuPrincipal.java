@@ -10,7 +10,6 @@ import sistemas2014.unifebe.edu.br.emprestaai.Cadastros.CadastroAmigo;
 import sistemas2014.unifebe.edu.br.emprestaai.Cadastros.CadastroEmprestimo;
 import sistemas2014.unifebe.edu.br.emprestaai.Consultas.ConsultaAmigo;
 import sistemas2014.unifebe.edu.br.emprestaai.Consultas.ConsultaEmprestimo;
-import sistemas2014.unifebe.edu.br.emprestaai.Modelos.DAO.BancoDados;
 
 public class MenuPrincipal extends AppCompatActivity {
 
