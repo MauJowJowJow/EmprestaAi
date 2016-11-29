@@ -41,7 +41,7 @@
             android:inputType="phone"
             android:ems="10"
             android:id="@+id/txtTelefone"
-            android:hint="@string/cellphone" />
+            android:hint="Telefone" />
 
         <EditText
             android:layout_width="match_parent"
@@ -52,21 +52,26 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/city"
-            android:id="@+id/txtCidade" />
+            android:hint="Estado"
+            android:id="@+id/txtEstado" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/city"
-            android:id="@+id/txtCidade" />
+            android:hint="Bairro"
+            android:id="@+id/txtBairro" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/city"
-            android:id="@+id/txtCidade" />
+            android:hint="Rua"
+            android:id="@+id/txtRua" />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CEP"
+            android:id="@+id/txtCEP" />
 
     </LinearLayout>
 
