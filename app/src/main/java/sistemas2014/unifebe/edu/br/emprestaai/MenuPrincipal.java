@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import sistemas2014.unifebe.edu.br.emprestaai.Controller.CadastroEmprestimo;
+import sistemas2014.unifebe.edu.br.emprestaai.Controller.CadastroItens;
 import sistemas2014.unifebe.edu.br.emprestaai.Controller.CadastroPesssoa;
+import sistemas2014.unifebe.edu.br.emprestaai.Model.Itens;
 
 
 public class MenuPrincipal extends AppCompatActivity {
@@ -21,6 +24,24 @@ public class MenuPrincipal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), CadastroPesssoa.class);
+                startActivity(i);
+            }
+        });
+
+        ImageButton btnItens = (ImageButton) findViewById(R.id.btnItens);
+        btnItens.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), CadastroItens.class);
+                startActivity(i);
+            }
+        });
+
+        ImageButton btnEmprestimos = (ImageButton) findViewById(R.id.btnEmprestimo);
+        btnItens.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), CadastroEmprestimo.class);
                 startActivity(i);
             }
         });

@@ -15,8 +15,10 @@
     <string name="activity_consultaAmigo">Consulta de Amigos</string>
     <string name="activity_detalheAmigo">Detalhe do Amigo</string>
     <string name="activity_emprestimo">Realizar um Empréstimo</string>
+    <string name="activity_cadastroItens">Cadastro de Itens</string>
     <string name="delete">Excluir</string>
     <string name="creator">Desenvolvedor - Mauricio Rodolfo</string>
     <string name="creator_email">Email - maumau.g.o@unifebe.edu.br</string>
     <string name="teacher">Professor - Edney Imme</string>
+    <string name="item_name">Nome do Item</string>
 </resources>

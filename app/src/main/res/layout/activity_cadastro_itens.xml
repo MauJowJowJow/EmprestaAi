@@ -8,32 +8,22 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context=".Controller.CadastroEmprestimo"
-    android:weightSum="1">
+    android:weightSum="1"
+    tools:context="sistemas2014.unifebe.edu.br.emprestaai.Controller.CadastroItens">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="373dp"
         android:orientation="vertical"
-        android:layout_weight="0.77">
-
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/spiAmigo"
-            android:spinnerMode="dropdown" />
-
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/spiItem"
-            android:spinnerMode="dropdown" />
+        android:layout_width="match_parent"
+        android:layout_height="372dp"
+        android:layout_weight="0.84">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtItem"
-            android:hint="@string/item"/>
+            android:inputType="text"
+            android:hint="@string/item_name"
+            android:ems="10"
+            android:id="@+id/txtNomeItem" />
     </LinearLayout>
 
     <Button
@@ -42,5 +32,4 @@
         android:text="@string/button_save"
         android:id="@+id/btnSalvar"
         android:layout_gravity="center_horizontal" />
-
 </LinearLayout>

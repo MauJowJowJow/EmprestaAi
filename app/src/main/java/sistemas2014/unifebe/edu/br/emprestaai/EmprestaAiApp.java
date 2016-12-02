@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.res.Configuration;
 
 import com.facebook.stetho.Stetho;
+import com.orm.SugarContext;
 
 
 /**
@@ -21,7 +22,7 @@ public class EmprestaAiApp extends Application {
         super.onCreate();
 
         Stetho.initializeWithDefaults(this);
-
+        SugarContext.init(getApplicationContext());
     }
 
     @Override
@@ -32,5 +33,7 @@ public class EmprestaAiApp extends Application {
     @Override
     public void onTerminate() {
         super.onTerminate();
+
+        SugarContext.terminate();
     }
 }

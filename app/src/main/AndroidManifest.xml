@@ -3,16 +3,24 @@
     package="sistemas2014.unifebe.edu.br.emprestaai">
 
     <application
+        android:name=".EmprestaAiApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <meta-data android:name="DATABASE" android:value="dbprod.db" />
-        <meta-data android:name="VERSION" android:value="2" />
-        <meta-data android:name="QUERY_LOG" android:value="true" />
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="sistemas2014.unifebe.edu.br.emprestaai" />
+        <meta-data
+            android:name="DATABASE"
+            android:value="dbprod.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="sistemas2014.unifebe.edu.br.emprestaai" />
 
         <activity android:name=".MenuPrincipal">
             <intent-filter>
@@ -24,7 +32,8 @@
         <activity
             android:name=".Controller.CadastroPesssoa"
             android:label="@string/activity_cadastroAmigo" />
-        <!--activity
+        <!--
+        activity
             android:name=".Consultas.ConsultaAmigo"
             android:label="@string/activity_consultaAmigo"
             android:theme="@style/AppTheme" />
@@ -36,7 +45,15 @@
             android:label="@string/activity_emprestimo" />
         <activity android:name=".Consultas.ConsultaEmprestimo" />
         <activity android:name=".Consultas.DetalheEmprestimo" />
-        <activity android:name=".Informacoes"></activity> -->
+        <activity android:name=".Informacoes"></activity>
+        -->
+        <activity
+            android:name=".Controller.CadastroEmprestimo"
+            android:label="@string/activity_emprestimo" />
+
+        <activity
+            android:name=".Controller.CadastroItens"
+            android:label="@string/activity_cadastroItens" />
     </application>
 
 </manifest>

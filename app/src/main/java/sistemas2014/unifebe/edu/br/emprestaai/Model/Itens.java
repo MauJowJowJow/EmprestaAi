@@ -9,7 +9,7 @@ import com.orm.SugarRecord;
 public class Itens extends SugarRecord{
 
     Long id;
-    String descrica;
+    String descricao;
 
     public Itens(){}
 
@@ -21,11 +21,11 @@ public class Itens extends SugarRecord{
         this.id = id;
     }
 
-    public String getDescrica() {
-        return descrica;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescrica(String descrica) {
-        this.descrica = descrica;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 }
