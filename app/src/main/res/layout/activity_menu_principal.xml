@@ -11,73 +11,129 @@
     tools:context="sistemas2014.unifebe.edu.br.emprestaai.MenuPrincipal"
     android:weightSum="1">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:weightSum="1"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_weight="0.17">
+
+        <TextView
+            android:text="Cadastro de Pessoas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
+
+        <ImageButton
+            android:id="@+id/btnCadastroPessoa"
+            android:layout_gravity="center"
+            android:src="@drawable/cadastro_pessoa"
+            android:layout_width="200dp"
+            android:layout_height="60dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:weightSum="1"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_weight="0.17">
+
+            <TextView
+            android:text="Consulta de Pessoas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
+
+        <ImageButton
+            android:layout_height="60dp"
+            android:id="@+id/btnConsultaPessoa"
+            android:src="@drawable/consulta_pessoas"
+            android:layout_gravity="center"
+            android:layout_width="200dp" />
+    </LinearLayout>
+
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:weightSum="1"
-            android:layout_gravity="center_vertical">
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_weight="0.17">
+
+            <TextView
+                android:text="Cadastrar Empréstimos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
 
             <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/btnCadastroPessoa"
-                android:layout_gravity="center"
-                android:src="@drawable/cadastro_amigo" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:weightSum="1">
-
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/btnConsultaAmigo"
-                android:src="@drawable/consulta_amigo" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:weightSum="1">
-
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="60dp"
                 android:id="@+id/btnEmprestimo"
-                android:src="@drawable/cadastro_emprestimo" />
+                android:src="@drawable/cadastrar_emprestimo"
+                android:layout_gravity="center"
+                android:layout_width="200dp" />
+
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:weightSum="1">
-
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/btnConsultaEmprestimo"
-                android:src="@drawable/consulta_emprestimo" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:weightSum="1"
-            android:layout_weight="0.21">
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_weight="0.17">
+
+            <TextView
+                android:text="Consultar Empréstimos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
+
+        <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:id="@+id/btnConsultaEmprestimo"
+                android:src="@drawable/listar_emprestimos"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:weightSum="1"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_weight="0.17">
+
+
+            <TextView
+                android:text="Cadastrar Itens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
 
             <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_width="200dp"
                 android:id="@+id/btnItens"
-                android:src="@drawable/info" />
+                android:src="@drawable/cadastrar_itens"
+                android:layout_gravity="center"
+                android:layout_height="60dp" />
         </LinearLayout>
 
 </LinearLayout>

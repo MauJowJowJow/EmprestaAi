@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import sistemas2014.unifebe.edu.br.emprestaai.Controller.CadastroEmprestimo;
 import sistemas2014.unifebe.edu.br.emprestaai.Controller.CadastroItens;
 import sistemas2014.unifebe.edu.br.emprestaai.Controller.CadastroPesssoa;
+import sistemas2014.unifebe.edu.br.emprestaai.Controller.ConsultaPessoa;
 import sistemas2014.unifebe.edu.br.emprestaai.Model.Itens;
 
 
@@ -46,14 +47,16 @@ public class MenuPrincipal extends AppCompatActivity {
             }
         });
 
-       /* ImageButton btnConsultaAmigo = (ImageButton) findViewById(R.id.btnConsultaAmigo);
+        ImageButton btnConsultaAmigo = (ImageButton) findViewById(R.id.btnConsultaPessoa);
         btnConsultaAmigo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), ConsultaAmigo.class);
+                Intent i = new Intent(getApplicationContext(), ConsultaPessoa.class);
                 startActivity(i);
             }
         });
+
+       /*
 
         ImageButton btnEmprestimo = (ImageButton) findViewById(R.id.btnEmprestimo);
         btnEmprestimo.setOnClickListener(new View.OnClickListener() {

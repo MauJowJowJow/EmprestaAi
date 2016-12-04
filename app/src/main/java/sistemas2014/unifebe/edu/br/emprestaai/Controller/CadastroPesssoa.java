@@ -22,8 +22,8 @@ public class CadastroPesssoa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_pessoa);
 
-        Button bntSalvar = (Button) findViewById(R.id.btnSalvar);
-        bntSalvar.setOnClickListener(new View.OnClickListener() {
+        Button btnSalvar = (Button) findViewById(R.id.btnSalvar);
+        btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -47,8 +47,16 @@ public class CadastroPesssoa extends AppCompatActivity {
                 pessoa.setTelefone(txtTelefone.getText().toString());
                 pessoa.setEmail(txtEmail.getText().toString());
 
-
                 pessoa.save();
+
+                txtNome.setText("");
+                txtBairro.setText("");
+                txtCep.setText("");
+                txtCidade.setText("");
+                txtEstado.setText("");
+                txtRua.setText("");
+                txtTelefone.setText("");
+                txtEmail.setText("");
 
                 if (pessoa.getId() != 0){
                     Toast.makeText(getApplicationContext(), "Cadastro salvo com sucesso!", Toast.LENGTH_LONG).show();
@@ -56,9 +64,6 @@ public class CadastroPesssoa extends AppCompatActivity {
                 }else{
                     Toast.makeText(getApplicationContext(), "Erro no cadastro!", Toast.LENGTH_LONG).show();
                 }
-
-
-
             }
         });
 

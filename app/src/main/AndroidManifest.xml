@@ -14,7 +14,7 @@
             android:value="dbprod.db" />
         <meta-data
             android:name="VERSION"
-            android:value="2" />
+            android:value="5" />
         <meta-data
             android:name="QUERY_LOG"
             android:value="true" />
@@ -31,12 +31,13 @@
         </activity>
         <activity
             android:name=".Controller.CadastroPesssoa"
-            android:label="@string/activity_cadastroAmigo" />
-        <!--
-        activity
-            android:name=".Consultas.ConsultaAmigo"
-            android:label="@string/activity_consultaAmigo"
+            android:label="Cadastro de Pessoa" />
+
+        <activity
+            android:name=".Controller.ConsultaPessoa"
+            android:label="Consulta de Pessoas"
             android:theme="@style/AppTheme" />
+        <!--
         <activity
             android:name=".Consultas.DetalheAmigo"
             android:label="@string/activity_detalheAmigo" />
