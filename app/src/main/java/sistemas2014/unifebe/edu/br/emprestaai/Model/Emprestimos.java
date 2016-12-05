@@ -1,5 +1,7 @@
 package sistemas2014.unifebe.edu.br.emprestaai.Model;
 
+import android.content.ClipData;
+
 import com.orm.SugarRecord;
 
 import java.util.Date;
@@ -16,6 +18,7 @@ public class Emprestimos extends SugarRecord {
     Date data_emprestimo;
     String objeto;
     String status;
+    Itens itens;
 
     public Emprestimos (){}
 
@@ -67,5 +70,13 @@ public class Emprestimos extends SugarRecord {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Itens getItens() {
+        return itens;
+    }
+
+    public void setItens(Itens itens) {
+        this.itens = itens;
     }
 }

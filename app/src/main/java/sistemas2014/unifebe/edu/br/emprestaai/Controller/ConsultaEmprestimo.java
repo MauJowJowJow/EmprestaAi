@@ -11,13 +11,12 @@ import java.util.Iterator;
 import java.util.List;
 
 import sistemas2014.unifebe.edu.br.emprestaai.Model.Emprestimos;
+import sistemas2014.unifebe.edu.br.emprestaai.Model.Pessoa;
 import sistemas2014.unifebe.edu.br.emprestaai.R;
 
 public class ConsultaEmprestimo extends ListActivity {
 
     private List<Emprestimos> listaEmprestimos = new ArrayList<Emprestimos>();
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +52,7 @@ public class ConsultaEmprestimo extends ListActivity {
         Emprestimos emprestimos;
         while (listDB.hasNext()) {
             emprestimos = listDB.next();
-            listaObjeto.add(emprestimos.getObjeto());
+            listaObjeto.add(emprestimos.getPessoa().getNome());
             listaEmprestimos.add(emprestimos);
         }
 

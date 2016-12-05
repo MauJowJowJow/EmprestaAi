@@ -15,28 +15,27 @@ import java.util.Iterator;
 import java.util.List;
 
 import sistemas2014.unifebe.edu.br.emprestaai.Model.Emprestimos;
+import sistemas2014.unifebe.edu.br.emprestaai.Model.Emprestimos_itens;
 import sistemas2014.unifebe.edu.br.emprestaai.Model.Itens;
 import sistemas2014.unifebe.edu.br.emprestaai.Model.Pessoa;
 import sistemas2014.unifebe.edu.br.emprestaai.R;
 
-/**
- * Created by mauma on 29/11/2016.
- */
+
 public class CadastroEmprestimo extends AppCompatActivity {
 
     private List<Pessoa> listaPessoas;
 
     private List<Itens> listaItens;
 
-     //txtObjeto = (EditText) findViewById(R.id.txtItem);
+    private Emprestimos emprestimos;
 
-
+    Spinner spiAmigo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_emprestimo);
 
-        Spinner spiAmigo = (Spinner)findViewById(R.id.spiAmigo);
+        spiAmigo = (Spinner)findViewById(R.id.spiAmigo);
 
         ArrayAdapter<String> spinnerPessoaArrayAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item,
@@ -54,12 +53,22 @@ public class CadastroEmprestimo extends AppCompatActivity {
         spinnerItemArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spiItem.setAdapter(spinnerItemArrayAdapter);
 
-
         Button bntSalvar = (Button) findViewById(R.id.btnSalvar);
         bntSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                try{
+                   emprestimos.setPessoa(listaPessoas.get((int)spiAmigo.getSelectedItemId()));
+                }catch(Exception ex) {
+                    System.out.print(ex.getStackTrace());
+                }
+
+                EditText txtItem = (EditText) findViewById(R.id.txtItem);
+
                 Emprestimos emprestimo = new Emprestimos();
+
+                emprestimo.setObjeto(txtItem.getText().toString());
 
 
                 emprestimo.save();
@@ -104,3 +113,4 @@ public class CadastroEmprestimo extends AppCompatActivity {
         return listaNome;
     }
 }
+
