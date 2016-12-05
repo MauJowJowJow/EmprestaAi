@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Iterator;
 import java.util.List;
 
@@ -80,6 +81,7 @@ public class CadastroEmprestimo extends AppCompatActivity {
                 emprestimos.setObjeto(txtItem.getText().toString());
                 emprestimos.setStatus("A");
 
+                emprestimos.setData_emprestimo(java.text.DateFormat.getDateTimeInstance().getCalendar().getTime());
 
                 emprestimos.save();
 
