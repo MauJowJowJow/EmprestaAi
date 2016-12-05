@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -49,11 +51,15 @@ public class CadastroEmprestimo extends AppCompatActivity {
         spinnerItemArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spiItem.setAdapter(spinnerItemArrayAdapter);
 
+        final EditText txtObjeto = (EditText) findViewById(R.id.txtItem);
         Button bntSalvar = (Button) findViewById(R.id.btnSalvar);
         bntSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Emprestimos emprestimo = new Emprestimos();
+                //emprestimo.setStatus("A");
+                //emprestimo.setObjeto("A");
+                emprestimo.setObjeto(txtObjeto.getText().toString());
 
                 emprestimo.save();
 

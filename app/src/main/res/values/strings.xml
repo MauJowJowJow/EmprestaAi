@@ -22,4 +22,5 @@
     <string name="teacher">Professor - Edney Imme</string>
     <string name="item_name">Nome do Item</string>
     <string name="item_escreva">Ou escreva o item!</string>
+    <string name="consulta_emprestimos">Consulta de Emprestimos</string>
 </resources>

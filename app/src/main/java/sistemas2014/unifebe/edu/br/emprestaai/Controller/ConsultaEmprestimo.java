@@ -9,26 +9,25 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import sistemas2014.unifebe.edu.br.emprestaai.Model.Pessoa;
+
+import sistemas2014.unifebe.edu.br.emprestaai.Model.Emprestimos;
 import sistemas2014.unifebe.edu.br.emprestaai.R;
 
-/**
- * Created by dougl on 04/12/2016.
- */
+public class ConsultaEmprestimo extends ListActivity {
 
-public class ConsultaPessoa extends ListActivity {
+    private List<Emprestimos> listaEmprestimos = new ArrayList<Emprestimos>();
 
-    private List<Pessoa> listaPessoas = new ArrayList<Pessoa>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_consulta_pessoa);
+        setContentView(R.layout.activity_consulta_emprestimo);
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>
                 (this,android.R.layout.simple_list_item_1,
-                        getListaPessoas());
+                        getListaEmprestimos());
         setListAdapter(dataAdapter);
 
     }
@@ -45,19 +44,20 @@ public class ConsultaPessoa extends ListActivity {
         startActivity(i);*/
     }
 
-    private List<String> getListaPessoas(){
-        Iterator<Pessoa> listDB = Pessoa.findAll(Pessoa.class);
-        List<String> listaNome = new ArrayList<String>();
-        listaPessoas = new ArrayList<Pessoa>();
 
-        Pessoa pessoa;
+    private List<String> getListaEmprestimos(){
+        Iterator<Emprestimos> listDB = Emprestimos.findAll(Emprestimos.class);
+        List<String> listaObjeto = new ArrayList<String>();
+        listaEmprestimos = new ArrayList<Emprestimos>();
+
+        Emprestimos emprestimos;
         while (listDB.hasNext()) {
-            pessoa = listDB.next();
-            listaNome.add(pessoa.getNome());
-            listaPessoas.add(pessoa);
+            emprestimos = listDB.next();
+            listaObjeto.add(emprestimos.getObjeto());
+            listaEmprestimos.add(emprestimos);
         }
 
-        return listaNome;
+        return listaObjeto;
     }
-}
 
+}

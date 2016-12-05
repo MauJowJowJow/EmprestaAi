@@ -44,7 +44,7 @@
         <activity
             android:name=".Cadastros.CadastroEmprestimo"
             android:label="@string/activity_emprestimo" />
-        <activity android:name=".Consultas.ConsultaEmprestimo" />
+
         <activity android:name=".Consultas.DetalheEmprestimo" />
         <activity android:name=".Informacoes"></activity>
         -->
@@ -55,6 +55,9 @@
         <activity
             android:name=".Controller.CadastroItens"
             android:label="@string/activity_cadastroItens" />
+
+        <activity android:name=".Controller.ConsultaEmprestimo"
+            android:label="@string/consulta_emprestimos"/>
     </application>
 
 </manifest>

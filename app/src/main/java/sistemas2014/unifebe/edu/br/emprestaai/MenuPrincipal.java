@@ -9,8 +9,8 @@ import android.widget.ImageButton;
 import sistemas2014.unifebe.edu.br.emprestaai.Controller.CadastroEmprestimo;
 import sistemas2014.unifebe.edu.br.emprestaai.Controller.CadastroItens;
 import sistemas2014.unifebe.edu.br.emprestaai.Controller.CadastroPesssoa;
+import sistemas2014.unifebe.edu.br.emprestaai.Controller.ConsultaEmprestimo;
 import sistemas2014.unifebe.edu.br.emprestaai.Controller.ConsultaPessoa;
-import sistemas2014.unifebe.edu.br.emprestaai.Model.Itens;
 
 
 public class MenuPrincipal extends AppCompatActivity {
@@ -39,7 +39,7 @@ public class MenuPrincipal extends AppCompatActivity {
         });
 
         ImageButton btnEmprestimos = (ImageButton) findViewById(R.id.btnEmprestimo);
-        btnItens.setOnClickListener(new View.OnClickListener() {
+        btnEmprestimos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), CadastroEmprestimo.class);
@@ -56,9 +56,6 @@ public class MenuPrincipal extends AppCompatActivity {
             }
         });
 
-       /*
-
-
         ImageButton btnConsultaEmprestimo = (ImageButton) findViewById(R.id.btnConsultaEmprestimo);
         btnConsultaEmprestimo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +64,7 @@ public class MenuPrincipal extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
+/*
         ImageButton btnInformacoes = (ImageButton) findViewById(R.id.btnInformacoes);
         btnInformacoes.setOnClickListener(new View.OnClickListener() {
             @Override
