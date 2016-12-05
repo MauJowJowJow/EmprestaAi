@@ -28,7 +28,7 @@ public class CadastroEmprestimo extends AppCompatActivity {
 
     private List<Itens> listaItens;
 
-    EditText txtObjeto = (EditText) findViewById(R.id.txtItem);
+     //txtObjeto = (EditText) findViewById(R.id.txtItem);
 
 
     @Override
@@ -60,9 +60,6 @@ public class CadastroEmprestimo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Emprestimos emprestimo = new Emprestimos();
-                //emprestimo.setStatus("A");
-                //emprestimo.setObjeto("A");
-                emprestimo.setObjeto(txtObjeto.getText().toString());
 
 
                 emprestimo.save();
