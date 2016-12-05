@@ -28,6 +28,9 @@ public class CadastroEmprestimo extends AppCompatActivity {
 
     private List<Itens> listaItens;
 
+    EditText txtObjeto = (EditText) findViewById(R.id.txtItem);
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +54,7 @@ public class CadastroEmprestimo extends AppCompatActivity {
         spinnerItemArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spiItem.setAdapter(spinnerItemArrayAdapter);
 
-        final EditText txtObjeto = (EditText) findViewById(R.id.txtItem);
+
         Button bntSalvar = (Button) findViewById(R.id.btnSalvar);
         bntSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +63,7 @@ public class CadastroEmprestimo extends AppCompatActivity {
                 //emprestimo.setStatus("A");
                 //emprestimo.setObjeto("A");
                 emprestimo.setObjeto(txtObjeto.getText().toString());
+
 
                 emprestimo.save();
 

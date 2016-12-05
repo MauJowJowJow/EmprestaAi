@@ -64,14 +64,5 @@ public class MenuPrincipal extends AppCompatActivity {
                 startActivity(i);
             }
         });
-/*
-        ImageButton btnInformacoes = (ImageButton) findViewById(R.id.btnInformacoes);
-        btnInformacoes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), Informacoes.class);
-                startActivity(i);
-            }
-        }); */
     }
 }

@@ -1,6 +1,7 @@
 package sistemas2014.unifebe.edu.br.emprestaai.Controller;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,9 +13,6 @@ import java.util.List;
 import sistemas2014.unifebe.edu.br.emprestaai.Model.Pessoa;
 import sistemas2014.unifebe.edu.br.emprestaai.R;
 
-/**
- * Created by dougl on 04/12/2016.
- */
 
 public class ConsultaPessoa extends ListActivity {
 
@@ -38,11 +36,11 @@ public class ConsultaPessoa extends ListActivity {
                                    int position, long id) {
         super.onListItemClick(l, v, position, id);
 
-        /* Fazer tela de detalhes da Pessoa recebendo o ID por parametro e carregando os dados.
+        //Fazer tela de detalhes da Pessoa recebendo o ID por parametro e carregando os dados.
 
         Intent i = new Intent(getApplicationContext(), DetalhePessoa.class);
         i.putExtra("id", listaPessoas.get(position).getId());
-        startActivity(i);*/
+        startActivity(i);
     }
 
     private List<String> getListaPessoas(){
