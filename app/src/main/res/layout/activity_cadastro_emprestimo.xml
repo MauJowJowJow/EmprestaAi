@@ -15,25 +15,29 @@
         android:layout_width="match_parent"
         android:layout_height="373dp"
         android:orientation="vertical"
-        android:layout_weight="0.77">
+        android:layout_weight="0.77"
+        android:weightSum="1">
 
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/spiAmigo"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            android:layout_weight="0.09" />
 
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/spiItem"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            android:layout_weight="0.08" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txtItem"
-            android:hint="@string/item"/>
+            android:hint="@string/item_escreva"
+            android:layout_weight="0.05" />
     </LinearLayout>
 
     <Button

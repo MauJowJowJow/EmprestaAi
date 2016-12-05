@@ -58,14 +58,6 @@ public class MenuPrincipal extends AppCompatActivity {
 
        /*
 
-        ImageButton btnEmprestimo = (ImageButton) findViewById(R.id.btnEmprestimo);
-        btnEmprestimo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), CadastroEmprestimo.class);
-                startActivity(i);
-            }
-        });
 
         ImageButton btnConsultaEmprestimo = (ImageButton) findViewById(R.id.btnConsultaEmprestimo);
         btnConsultaEmprestimo.setOnClickListener(new View.OnClickListener() {
