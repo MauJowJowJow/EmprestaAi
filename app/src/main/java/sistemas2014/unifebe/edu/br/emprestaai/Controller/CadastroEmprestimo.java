@@ -30,6 +30,8 @@ public class CadastroEmprestimo extends AppCompatActivity {
     private Emprestimos emprestimos;
 
     Spinner spiAmigo;
+    Spinner spiItem;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +46,7 @@ public class CadastroEmprestimo extends AppCompatActivity {
         spinnerPessoaArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spiAmigo.setAdapter(spinnerPessoaArrayAdapter);
 
-        Spinner spiItem = (Spinner)findViewById(R.id.spiItem);
+        spiItem = (Spinner)findViewById(R.id.spiItem);
 
         ArrayAdapter<String> spinnerItemArrayAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item,
@@ -58,22 +60,30 @@ public class CadastroEmprestimo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                emprestimos = new Emprestimos();
+
+                EditText txtItem = (EditText) findViewById(R.id.txtItem);
+
                 try{
                    emprestimos.setPessoa(listaPessoas.get((int)spiAmigo.getSelectedItemId()));
                 }catch(Exception ex) {
                     System.out.print(ex.getStackTrace());
                 }
 
-                EditText txtItem = (EditText) findViewById(R.id.txtItem);
+                try{
+                    emprestimos.setItens(listaItens.get((int)spiItem.getSelectedItemId()));
+                }catch(Exception ex) {
+                    System.out.print(ex.getStackTrace());
+                }
 
-                Emprestimos emprestimo = new Emprestimos();
 
-                emprestimo.setObjeto(txtItem.getText().toString());
+                emprestimos.setObjeto(txtItem.getText().toString());
+                emprestimos.setStatus("A");
 
 
-                emprestimo.save();
+                emprestimos.save();
 
-                if(emprestimo.getId() != 0){
+                if(emprestimos.getId() != 0){
                     Toast.makeText(getApplicationContext(), "Emprestimo salvo com sucesso!", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(getApplicationContext(), "Erro ao salvar o emprestimo!", Toast.LENGTH_SHORT).show();
