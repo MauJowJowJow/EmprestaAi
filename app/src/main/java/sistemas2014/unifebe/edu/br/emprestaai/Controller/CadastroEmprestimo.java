@@ -77,8 +77,6 @@ public class CadastroEmprestimo extends AppCompatActivity {
                 if(swiStatusItem.isChecked()){
                     txtItem.setEnabled(true);
                     spiItem.setEnabled(false);
-
-
                   }
                  else{
                     txtItem.setEnabled(false);
@@ -102,14 +100,15 @@ public class CadastroEmprestimo extends AppCompatActivity {
                     System.out.print(ex.getStackTrace());
                 }
 
-                try{
-                    emprestimos.setItens(listaItens.get((int)spiItem.getSelectedItemId()));
-                }catch(Exception ex) {
-                    System.out.print(ex.getStackTrace());
+                if(!swiStatusItem.isChecked()) {
+                    try {
+                        emprestimos.setItens(listaItens.get((int) spiItem.getSelectedItemId()));
+                    } catch (Exception ex) {
+                        System.out.print(ex.getStackTrace());
+                    }
+                }else {
+                    emprestimos.setObjeto(txtItem.getText().toString());
                 }
-
-
-                emprestimos.setObjeto(txtItem.getText().toString());
                 emprestimos.setStatus("A");
 
                 emprestimos.setData_emprestimo(java.text.DateFormat.getDateTimeInstance().getCalendar().getTime());
