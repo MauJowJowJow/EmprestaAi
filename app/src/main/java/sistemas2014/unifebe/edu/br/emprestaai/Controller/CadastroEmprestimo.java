@@ -2,11 +2,13 @@ package sistemas2014.unifebe.edu.br.emprestaai.Controller;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +32,10 @@ public class CadastroEmprestimo extends AppCompatActivity {
 
     private Emprestimos emprestimos;
 
+    EditText txtItem;
+
+    Switch swiStatusItem;
+
     Spinner spiAmigo;
     Spinner spiItem;
 
@@ -49,12 +55,37 @@ public class CadastroEmprestimo extends AppCompatActivity {
 
         spiItem = (Spinner)findViewById(R.id.spiItem);
 
-        ArrayAdapter<String> spinnerItemArrayAdapter = new ArrayAdapter<String>(this,
+        final ArrayAdapter<String> spinnerItemArrayAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item,
                 getListaItens());
 
         spinnerItemArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spiItem.setAdapter(spinnerItemArrayAdapter);
+
+        txtItem = (EditText) findViewById(R.id.txtItem);
+        txtItem.setEnabled(false);
+
+        swiStatusItem = (Switch) findViewById(R.id.swiStatusItem);
+        swiStatusItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                txtItem = (EditText) findViewById(R.id.txtItem);
+
+                spiItem = (Spinner)findViewById(R.id.spiItem);
+
+                if(swiStatusItem.isChecked()){
+                    txtItem.setEnabled(true);
+                    spiItem.setEnabled(false);
+
+
+                  }
+                 else{
+                    txtItem.setEnabled(false);
+                    spiItem.setEnabled(true);
+                }
+            }
+        });
 
         Button bntSalvar = (Button) findViewById(R.id.btnSalvar);
         bntSalvar.setOnClickListener(new View.OnClickListener() {
@@ -90,9 +121,18 @@ public class CadastroEmprestimo extends AppCompatActivity {
                 }else{
                     Toast.makeText(getApplicationContext(), "Erro ao salvar o emprestimo!", Toast.LENGTH_SHORT).show();
                 }
+
+
+                //Switch swiStatusItem = (Switch) findViewById(R.id.swiStatusItem);
+
+
+
             }
         });
     }
+
+
+
 
     private List<String> getListaPessoas(){
         Iterator<Pessoa> listDB = Pessoa.findAll(Pessoa.class);

@@ -11,11 +11,14 @@
         android:layout_weight="1">
 
         <TextView
-            android:text="Nome da Pessoa"
-            android:layout_height="wrap_content"
+            android:text="Pessoa"
+            android:layout_height="30dp"
             android:id="@+id/txtPessoa"
             android:layout_width="fill_parent"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:textAlignment="center"/>
 
     </RelativeLayout>
     <RelativeLayout
@@ -24,11 +27,14 @@
         android:layout_weight="1">
 
         <TextView
-            android:text="Nome do Item"
-            android:layout_height="wrap_content"
+            android:text="Item"
+            android:layout_height="30dp"
             android:id="@+id/txtItem"
             android:layout_width="fill_parent"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:textAlignment="center"/>
 
     </RelativeLayout>
 

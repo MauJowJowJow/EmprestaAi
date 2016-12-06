@@ -11,6 +11,7 @@
     tools:context=".Controller.CadastroEmprestimo"
     android:weightSum="1">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="373dp"
@@ -18,12 +19,30 @@
         android:layout_weight="0.77"
         android:weightSum="1">
 
+        <TextView
+            android:text="Pessoa para quem deseja emprestar? "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7"
+            android:layout_weight="0.05"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/spiAmigo"
             android:spinnerMode="dropdown"
             android:layout_weight="0.09" />
+
+        <TextView
+            android:text="Objeto a emprestar: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            android:layout_weight="0.05"
+            android:textSize="18dp"
+            android:textColor="#000"/>
 
         <Spinner
             android:layout_width="match_parent"
@@ -37,7 +56,21 @@
             android:layout_height="wrap_content"
             android:id="@+id/txtItem"
             android:hint="@string/item_escreva"
-            android:layout_weight="0.05" />
+            android:layout_weight="0.11" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <Switch
+                android:text="Informar um item nao cadastrado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/swiStatusItem" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <Button
