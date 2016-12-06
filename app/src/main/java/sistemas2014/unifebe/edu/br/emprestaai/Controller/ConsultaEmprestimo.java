@@ -18,17 +18,17 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import sistemas2014.unifebe.edu.br.emprestaai.Controller.ListAdapters.ConsultaEmprestimoListAdapter;
 import sistemas2014.unifebe.edu.br.emprestaai.Model.Emprestimos;
 import sistemas2014.unifebe.edu.br.emprestaai.Model.Pessoa;
 import sistemas2014.unifebe.edu.br.emprestaai.R;
 
 public class ConsultaEmprestimo extends ListActivity {
 
-    private List<Emprestimos> listaEmprestimos = new ArrayList<Emprestimos>();
-    private List<String> listaPessoas = new ArrayList<String>();
+    private ArrayList<Emprestimos> listaEmprestimos = new ArrayList<Emprestimos>();
     private Switch swiStatus;
-    private ArrayAdapter<String> dataAdapter;
-    private int posicaoClick;
+    private ConsultaEmprestimoListAdapter consultaEmprestimoListAdapter;
+    private Emprestimos emprestimoSelecionado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +37,15 @@ public class ConsultaEmprestimo extends ListActivity {
         setContentView(R.layout.activity_consulta_emprestimo);
         swiStatus = (Switch) (findViewById(R.id.swiStatus));
 
-        dataAdapter = new ArrayAdapter<String>
-                (this,android.R.layout.simple_list_item_1,
-                        listaPessoas);
+        consultaEmprestimoListAdapter = new ConsultaEmprestimoListAdapter(this, listaEmprestimos);
 
-        setListAdapter(dataAdapter);
+        View header = (View)getLayoutInflater().inflate(R.layout.header_consulta_emprestimo,null);
+        View footer = (View)getLayoutInflater().inflate(R.layout.footer_consulta_emprestimo,null);
+        ListView listView = getListView();
+
+        listView.addHeaderView(header);
+        listView.addFooterView(footer);
+        setListAdapter(consultaEmprestimoListAdapter);
 
         swiStatus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,33 +61,39 @@ public class ConsultaEmprestimo extends ListActivity {
     protected void onListItemClick(ListView l, View v,
                                    int position, long id) {
         super.onListItemClick(l, v, position, id);
-        posicaoClick = position;
+        emprestimoSelecionado = listaEmprestimos.get(position-1);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(ConsultaEmprestimo.this);
-        builder
-                .setMessage("Deseja finalizar este empréstimo?")
-                .setPositiveButton("Sim",  new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-                        Emprestimos emprestimo = listaEmprestimos.get(posicaoClick);
-                        emprestimo.setStatus("F");
+        if(emprestimoSelecionado.getStatus().equals("A")) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(ConsultaEmprestimo.this);
+            builder
+                    .setMessage("Deseja finalizar este empréstimo?")
+                    .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+                            emprestimoSelecionado.setStatus("F");
 
-                        emprestimo.save();
-                        atualizaListView();
-                    }
-                })
-                .setNegativeButton("Não", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                })
-                .show();
+                            emprestimoSelecionado.save();
+                            atualizaListView();
+                        }
+                    })
+                    .setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                        }
+                    })
+                    .show();
+        }else{
+            AlertDialog.Builder builder = new AlertDialog.Builder(ConsultaEmprestimo.this);
+            builder
+                    .setMessage("Empréstimo já finalizado!")
+                    .show();
+        }
     }
 
     private void atualizaListView(){
         atualizaListaEmprestimos();
-        dataAdapter.notifyDataSetChanged();
+        consultaEmprestimoListAdapter.notifyDataSetChanged();
     }
 
     private void atualizaListaEmprestimos(){
@@ -95,13 +105,10 @@ public class ConsultaEmprestimo extends ListActivity {
             listDB = Emprestimos.findAll(Emprestimos.class);
         }
 
-        listaPessoas.clear();
         listaEmprestimos.clear();
-
         Emprestimos emprestimos;
         while (listDB.hasNext()) {
             emprestimos = listDB.next();
-            listaPessoas.add(emprestimos.getPessoa().getNome());
             listaEmprestimos.add(emprestimos);
         }
     }
