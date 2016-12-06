@@ -61,33 +61,36 @@ public class ConsultaEmprestimo extends ListActivity {
     protected void onListItemClick(ListView l, View v,
                                    int position, long id) {
         super.onListItemClick(l, v, position, id);
-        emprestimoSelecionado = listaEmprestimos.get(position-1);
 
-        if(emprestimoSelecionado.getStatus().equals("A")) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(ConsultaEmprestimo.this);
-            builder
-                    .setMessage("Deseja finalizar este empréstimo?")
-                    .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int id) {
-                            emprestimoSelecionado.setStatus("F");
+        if(position > 0 && position <= listaEmprestimos.size()) {
+            emprestimoSelecionado = listaEmprestimos.get(position - 1);
 
-                            emprestimoSelecionado.save();
-                            atualizaListView();
-                        }
-                    })
-                    .setNegativeButton("Não", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int id) {
-                            dialog.cancel();
-                        }
-                    })
-                    .show();
-        }else{
-            AlertDialog.Builder builder = new AlertDialog.Builder(ConsultaEmprestimo.this);
-            builder
-                    .setMessage("Empréstimo já finalizado!")
-                    .show();
+            if (emprestimoSelecionado.getStatus().equals("A")) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(ConsultaEmprestimo.this);
+                builder
+                        .setMessage("Deseja finalizar este empréstimo?")
+                        .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int id) {
+                                emprestimoSelecionado.setStatus("F");
+
+                                emprestimoSelecionado.save();
+                                atualizaListView();
+                            }
+                        })
+                        .setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        })
+                        .show();
+            } else {
+                AlertDialog.Builder builder = new AlertDialog.Builder(ConsultaEmprestimo.this);
+                builder
+                        .setMessage("Empréstimo já finalizado!")
+                        .show();
+            }
         }
     }
 
