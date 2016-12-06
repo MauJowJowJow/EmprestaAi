@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
+import android.widget.BaseAdapter   ;
 import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
