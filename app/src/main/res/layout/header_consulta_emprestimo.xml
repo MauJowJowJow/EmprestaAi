@@ -11,8 +11,7 @@
         android:layout_weight="1">
 
         <TextView
-            android:layout_centerVertical="true"
-            android:text="Nome Pessoa"
+            android:text="Nome da Pessoa"
             android:layout_height="wrap_content"
             android:id="@+id/txtPessoa"
             android:layout_width="fill_parent"
@@ -25,7 +24,6 @@
         android:layout_weight="1">
 
         <TextView
-            android:layout_centerVertical="true"
             android:text="Nome do Item"
             android:layout_height="wrap_content"
             android:id="@+id/txtItem"
